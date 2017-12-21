@@ -1,0 +1,17 @@
+{
+	"navs": [
+		{
+			"name": "index", "path": "/index", "redirect": "/branchBusiness/identity", "text": "分公司业务管理",
+			"children": [
+				{"name": "identity", "path": "/branchBusiness/identity", "permission": ["add"], "text": "身份信息录入"},
+				{"name": "confirmingApply", "path": "/branchBusiness/confirmingApply", "permission": ["add", "edit"], "text": "待确认申请件-消分"}
+			]
+		},
+		{
+			"name": "index", "path": "/index", "redirect": "/riskManage/thirdCredit", "text": "风险管理中心",
+			"children": [
+				{"name": "thirdCredit", "path": "/riskManage/thirdCredit", "permission": ["add", "delete"], "text": "第三方征信"}
+			]
+		}
+	]
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中央审批系统</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../../assets/assets.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/iview.css">
+    <!-- 服务环境下引入 -->
+    <link rel="stylesheet/less" type="text/css" href="index.less" />
+    <!-- require -->
+    <script src="../../js/lib/require.min.js" data-main="../../js/main.js"></script>
+</head>
+<body>
+    
+    <!-- index 根节点 -->
+    <div id="index" v-cloak>
+        <!-- header组件 -->
+        <my-header></my-header>
+        <!-- 导航栏组件 -->
+        <my-nav></my-nav>
+        <!-- 面包屑导航 -->
+        <div class="bread-nav-wrapper">
+            <Breadcrumb>
+                <Breadcrumb-item href="/">
+                    <Icon type="ios-home-outline"></Icon> 首页
+                </Breadcrumb-item>
+                <Breadcrumb-item href="/components/breadcrumb">
+                    <Icon type="social-buffer-outline"></Icon> 第一个模块
+                </Breadcrumb-item>
+            </Breadcrumb>
+        </div>
+        <!-- 内容 -->
+        <div class="index-content content-wrapper">
+            <h2>姓名：{{name}}</h2>
+            <i-table :columns="columns1" :data="data1"></i-table>
+            <Page :total="100" show-total></Page>
+            <!-- 测试组件 -->
+            <Tabs value="name1">
+                <Tab-Pane label="标签一" name="name1">标签一的内容</Tab-Pane>
+                <Tab-Pane label="标签二" name="name2">标签二的内容</Tab-Pane>
+                <Tab-Pane label="标签三" name="name3">标签三的内容</Tab-Pane>
+            </Tabs>
+            <Slider v-model="value" range></Slider>
+            <Input-number :max="10" :min="1" :value="1"></Input-number>
+            <Date-Picker type="date" placeholder="选择日期" style="width: 200px" ></Date-Picker>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // 模块的js
+        require(['./../components/index/index']);
+    </script>
+</body>
+</html>

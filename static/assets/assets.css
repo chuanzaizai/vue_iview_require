@@ -1,0 +1,138 @@
+
+body{
+  background: #f2f2f2 !important;
+}
+/*解决vue解析闪烁问题*/
+  [v-cloak] { display:none}
+  /*loading 样式*/
+  .loading-wrapper {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: rgba(63, 64, 65, 0);
+  }
+  .spinner {
+      position: relative;
+      top: 300px;
+      left: 50%;
+      margin: -30px 0 0 -100px;
+      width: 200px;
+      height: 60px;
+      background: rgba(255, 255, 255, 1);
+      z-index: 9999;
+  }
+   .spinner-text{
+      width: 120px;
+      height: 60px;
+      line-height: 60px;
+       position: absolute;
+    top: 0;
+    right: 18px;
+    color: #6b6b6b;
+    text-align: center;
+   }
+  .double-bounce1, .double-bounce2 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #56c5cf;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: bounce 2.0s infinite ease-in-out;
+    -ms-animation: bounce 2.0s infinite ease-in-out;
+    -moz-animation: bounce 2.0s infinite ease-in-out;
+    -o-animation: bounce 2.0s infinite ease-in-out;
+    animation: bounce 2.0s infinite ease-in-out;
+  }
+   
+  .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    -ms-animation-delay: -1.0s;
+    -moz-animation-delay: -1.0s;
+    -o-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+   
+  @-webkit-keyframes bounce {
+    0%, 100% { -webkit-transform: scale(0.0);
+          -moz-transform: scale(0.0);
+          -ms-transform: scale(0.0);
+          -o-transform: scale(0.0);
+          transform: scale(0.0);
+     }
+    50% { -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    -o-transform: scale(1.0);
+    transform: scale(1.0); }
+  }
+   
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+      -moz-transform: scale(0.0);
+      -ms-transform: scale(0.0);
+      -o-transform: scale(0.0);
+    } 50% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+      -moz-transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      -o-transform: scale(1.0);
+    }
+  }
+
+/* header */
+.head-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  background: #317ef3;
+  color: #fff;
+  text-align: center;
+}
+
+/* nav */
+.nav-wrapper{
+  position: fixed;
+  top: 70px;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 200px;
+  height: 100%;
+  background: #444;
+  color: #fff;
+}
+
+/* 面包屑导航 */
+.bread-nav-wrapper{
+  position: absolute; 
+  top: 70px;
+  left: 220px;
+  right: 0;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* content */
+.content-wrapper{
+  position: absolute; 
+  top: 110px;
+  left: 200px;
+  right: 0;
+  margin: 0 20px 20px 20px;
+  padding: 15px;
+  min-height: 1500px;
+  background: #fff;
+}
